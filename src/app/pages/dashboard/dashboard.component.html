@@ -1,0 +1,24 @@
+<div class="container">
+
+
+  <div  *ngIf="!cliente">
+    <p>Has de iniciar sesion</p>
+
+</div>
+<div *ngIf="cliente">
+<div class="text-center mb-4">  <a  routerLink="/pages/nueva-transferencia" class="btn btn-primary text-center">Nueva Transferencia</a></div>
+
+ <div  class="row">
+
+    <div routerLink="/pages/transferencias-enviadas" class="col">
+      <app-transferencias-enviadas></app-transferencias-enviadas>
+    </div>
+    <div routerLink="/pages/transferencias-recibidas" class="col">
+      <app-transferencias-recibidas></app-transferencias-recibidas>
+
+    </div>
+  </div>
+</div>
+ 
+
+</div>

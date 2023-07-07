@@ -1,0 +1,61 @@
+<div class="container">
+
+    <!-- 1 fila con 2 columnas-->
+    <img class="img-fluid"  width="80px" height="60px" src="https://th.bing.com/th/id/R.0ababdb27dd0bb71f21f03c98b6cd6f1?rik=%2fiVDxahrgNztPA&pid=ImgRaw&r=0" alt="">
+    <div class="row">
+        <div class="col">
+            
+            <h2>DATOS DEL CLIENTE</h2>
+           <p>Nombre : {{cliente.username}}</p>
+           <p>Email : {{cliente.mail}}</p>
+           <h3>saladio actual : {{cliente.saldo}} EUROS</h3>
+
+
+
+           <h2>Mensajes con Mi gestor</h2>
+
+           <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Mensaje</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Gestor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let mensaje of mensajes">
+                <td>{{ mensaje.texto }}</td>
+               
+                <td>{{ mensaje.fecha | date:'short' }}</td>
+                <td>{{ mensaje.gestorDestino.username}}</td>
+              </tr>
+    
+            </tbody>
+          </table>
+
+
+           
+        </div>
+        <div class="col m-4">
+            <form>
+                
+                <div class="mb-3">
+                 <h2>Cambiar Contraseña</h2>
+                  <input   [(ngModel)]="passw" name="passw" type="password" placeholder="nuevacontraseña:"  class="form-control" id="exampleInputPassword1">
+                </div>
+               
+               
+                <button (click)="changePassw()" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+            
+
+        </div>
+    </div>
+
+   
+   
+    <button type="submit" class="btn btn-primary">Contactar con Gestor</button>
+   
+
+</div>

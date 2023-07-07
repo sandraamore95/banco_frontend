@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col">
+        <form>
+            
+            <div class="mb-3">
+             
+              <input [(ngModel)]="nuevaTransferencia.clienteDestino.id"  [ngModelOptions]="{standalone: true}" type="text" placeholder="ID BENEFICIARIO:" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+             
+                <input  [(ngModel)]="nuevaTransferencia.importe" [ngModelOptions]="{standalone: true}" type="text" placeholder="IMPORTE" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+             
+                <input [(ngModel)]="nuevaTransferencia.concepto" [ngModelOptions]="{standalone: true}" type="text" placeholder="CONCEPTO" class="form-control" id="exampleInputPassword1">
+              </div>
+           
+            <button (click)="addTransferencia()" type="submit" class="btn btn-primary">Confirmar</button>
+          </form>
+
+    </div>
+</div>
